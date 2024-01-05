@@ -1,0 +1,9 @@
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+        Bề dày d (mm) & 0 & 20,07 & 45,75 & 70,75 & \\ \hline
+        Số đếm tổng (số đếm) & 12729 & 8594 & 4972 & 2966 & \\ \hline
+        Sai số số đếm thực (số đếm) & 112,82 & 92,70 & 70,51 & 54,46 & \\ \hline
+    \end{tabular}
+\end{table}
