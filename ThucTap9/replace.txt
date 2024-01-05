@@ -1,0 +1,13 @@
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{cc}
+    \hline
+        Vị trí kênh K & "Năng lượng phát gamma E (keV)" \\ \hline
+        500 & 138,30 \\ 
+        1565 & 416,90 \\ 
+        3102 & 818,70 \\ 
+        4163 & 1097,30 \\ 
+        4914 & 1293,50 \\ 
+        5731 & 1507,40 \\ 
+    \end{tabular}
+\end{table}

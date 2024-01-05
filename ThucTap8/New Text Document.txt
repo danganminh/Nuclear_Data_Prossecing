@@ -1,0 +1,14 @@
+\begin{table}[!ht]
+\centering
+\begin{tabular}{cccc}
+\hline
+Energy (keV) & Intensity (\%) & Type & Origin*  \cr \hline
+57,356 (7) & 11,7 (4) & $\gamma$ & Pr-143  \cr
+272,9 (2) & 0,0043 (43) & $\gamma$ & Pr-143  \cr
+338,3 (2) & 0,0009 (5) & $\gamma$ & Pr-143  \cr
+350,619 (3) & 3,23 (4) & $\gamma$ & Pr-143  \cr
+389,64 (2) & 0,0364 (18) & $\gamma$ & Pr-143  \cr
+1 160,58 (6) & 0,0024 (3) & $\gamma$ & Pr-143  \cr
+1 340,1 (1) & 0,00308 (14) & $\gamma$ & Pr-143  \cr \hline
+\end{tabular}
+\end{table}
