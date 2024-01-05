@@ -1,0 +1,17 @@
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+        ~ & K\_alpha & E\_alpha (keV) & K\_beta (keV) & E\_beta \\ \hline
+        Ti & 364 & 4,51 & 397 & 4,93 \\ \hline
+        Mn & 476 & 5,90 & 523 & 6,49 \\ \hline
+        Zn & 693 & 8,64 & 769 & 9,57 \\ \hline
+        Br & 957 & 11,92 & 1068 & 13,29 \\ \hline
+        Co & 556 & 6,93 & 608 & 7,65 \\ \hline
+        V & 399 & 4,95 & 437 & 5,43 \\ \hline
+        As & 845 & 10,54 & 940 & 11,73 \\ \hline
+        Cr & 438 & 5,41 & 473 & 5,95 \\ \hline
+        Fe & 513 & 6,40 & 566 & 7,06 \\ \hline
+        Ni & 597 & 7,48 & 666 & 8,26 \\ \hline
+    \end{tabular}
+\end{table}
