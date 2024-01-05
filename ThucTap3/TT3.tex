@@ -1,0 +1,184 @@
+\documentclass{article}
+
+\usepackage[utf8]{vietnam}
+\usepackage[a4paper, top=2.5cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{amsmath,amssymb,graphicx}
+\usepackage{floatrow}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{scrextend}
+\usepackage{multirow}
+\usepackage[vietnamese]{babel}
+\usepackage{afterpage}
+
+\setlength{\parindent}{0pt}
+\changefontsizes{12pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Nguyễn Minh Đăng-20230022}
+\fancyfoot[C]{\thepage}
+\onehalfspacing
+\pagenumbering{arabic}
+
+
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE Trường Đại học Khoa học Tự nhiên \\ Đại học Quốc gia TP.HCM}\\[1.5cm] % Name of your university/college
+
+\vspace{4cm}
+
+
+\textsc{\Large Thực Tập Cơ Sở Kỹ Thuật Hạt Nhân}\\[0.5cm] % Major heading such as course name
+%\textsc{\large Assignment 1}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \Large \bfseries Bài 3: XÁC ĐỊNH TỐC ĐỘ ĐẾM VÀ SAI SỐ}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{\textwidth}
+\begin{flushleft} \large
+\emph{Nguyễn Minh Đăng \\ MSSV: 20230022}\\
+
+\end{flushleft}
+\end{minipage}
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+\vspace{7cm}
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+ % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\newpage
+\null
+\thispagestyle{empty}%
+\addtocounter{page}{-1}%
+\newpage
+
+\section{\LARGE Báo Cáo Thực Hành}
+
+\subsection{Dụng cụ}
+
+Nguồn:
+\begin{itemize}
+  \item $Ra-226$ $(9\mu Ci)$
+  \item $Ra-226$ $(5\mu Ci)$
+\end{itemize}
+
+Hệ đếm Geiger Muller: ống đếm Geiger Muller, bộ biến đổi xung và bộ đếm xung.
+
+Thời gian đo: 60 giây
+
+\subsection{Bảng số liệu}
+\begin{table}[!ht]
+    \raggedleft
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+        \multirow{2}{*}{Times (s)} & \multirow{2}{*}{Np} & \multirow{2}{*}{N Ra-226 (9$\mu$Ci)} & \multirow{2}{*}{N Ra-226 (5$\mu$Ci)} &  \multirow{2}{*}{$(N_{pi} - \bar{Np})^2$}  &  \multirow{2}{*}{$(N_i - \bar{N})^2$ 9$\mu$Ci} &  \multirow{2}{*}{$(N_i - \bar{N})^2$ 5$\mu$Ci} \\ 
+        & & & & & & \\
+        \hline
+        60 & 45 & 77601 & 12361 & 70.56 & 785704.96 & 17187.21 \\ 
+        60 & 47 & 74171 & 12361 & 108.16 & 6469900.96 & 17187.21 \\ 
+        60 & 37 & 73842 & 12518 & 0.16 & 8251830.76 & 670.81 \\ 
+        60 & 47 & 78747 & 12408 & 108.16 & 4130649.76 & 7072.81 \\ 
+        60 & 30 & 77936 & 12537 & 43.56 & 1491817.96 & 2016.01 \\ 
+        60 & 27 & 79565 & 12561 & 92.16 & 8124780.16 & 4747.21 \\ 
+        60 & 43 & 75992 & 12518 & 40.96 & 522150.76 & 670.81 \\ 
+        60 & 30 & 77404 & 12591 & 43.56 & 475272.36 & 9781.21 \\
+        60 & 31 & 76581 & 12522 & 31.36 & 17848.96 & 894.01 \\ 
+        60 & 29 & 75307 & 12544 & 57.76 & 1981337.76 & 2693.61 \\ \hline
+        TB & 36.60 & 76714.60 & 12492.10 & 59.64 & 3225129.44 & 6292.09 \\ \hline
+    \end{tabular}
+    }
+\end{table}
+
+\subsection{Trình bày tốc độ đếm trung bình của phông và nguồn}
+
+Ta có công thức xác định số đếm trung bình của phông
+\begin{align*}
+	\bar{N_p} = \frac{1}{k}\sum_{i=1}^{k}N_{pi} = \frac{1}{10}\sum_{i=1}^{10}N_{pi}= 36.60 \text{ (counts/60s)}
+\end{align*}
+
+Đặt $N_{Ra-9}$ là số đếm thật của nguồn Ra-226 $(9\mu Ci)$
+\begin{align*}
+	\bar{N}_{Ra(9\mu Ci)} = \frac{1}{k}\sum_{i=1}^{k}N_{i} = \frac{1}{10}\sum_{i=1}^{10}N_{tot Ra(9\mu Ci)} - N_{pi} =76714.60 - 36.60 = 76678.00 \text{ (counts/60s)}
+\end{align*}
+
+Đặt $N_{Ra-5}$ là số đếm thật của nguồn Ra-226 $(5\mu Ci)$
+\begin{align*}
+	\bar{N}_{Ra(5\mu Ci)} = \frac{1}{k}\sum_{i=1}^{k}N_{i} = \frac{1}{10}\sum_{i=1}^{10}N_{tot Ra(5\mu Ci)} - N_{pi} = 12492.10 - 36.60 = 12455.50 \text{ (counts/60s)}
+\end{align*}
+
+\subsection{Trình bày kết quả sai số theo các công thức (3.6), (3.7) và (3.8)}
+
+Sai số của phông: $\Delta \bar{n}_p$. Nguồn Ra-226 $(9\mu Ci)$: $\Delta \bar{n}_{Ra-9}$. Và nguồn Ra-226 $(5\mu Ci)$: $\Delta \bar{n}_{Ra-5}$
+\begin{align*}
+	&\Delta \bar{n}_p = \frac{\Delta \bar{N}_p}{t} =\frac{\sqrt{\frac{\sum_{i=1}^{k}(N_{pi} - \bar{N}_p)^2}{k(k-1)}}}{t} = \frac{\sqrt{\frac{59.64\times10}{10(10-1)}}}{60} = 0.04 \text{ (counts/s)} \\
+	\\
+	&\Delta \bar{n}_{Ra(9\mu Ci)} = \frac{\Delta \bar{N}_{Ra(9\mu Ci)}}{t} =\frac{\sqrt{\frac{\sum_{i=1}^{k}(N_i - \bar{N}_{Ra(9\mu Ci)})^2}{k(k-1)}}}{t} = \frac{\sqrt{\frac{3225129.44
+\times10}{10(10-1)}}}{60} = 9.98 \text{ (counts/s)} \\
+	\\
+	&\Delta \bar{n}_{Ra(5\mu Ci)} = \frac{\Delta \bar{N}_{Ra(5\mu Ci)}}{t} =\frac{\sqrt{\frac{\sum_{i=1}^{k}(N_{Ra(5\mu Ci)} - \bar{N}_{Ra(5\mu Ci)})^2}{k(k-1)}}}{t} = \frac{\sqrt{\frac{6292.09
+\times10}{10(10-1)}}}{60} = 0.44 \text{ (counts/s)}
+\end{align*}
+
+\subsection{Trình bày kết quả tốc độ đếm thật của nguồn theo công thức (3.9)}
+
+Tốc độ đếm thật của nguồn Ra-226 $(9\mu Ci)$
+\begin{flalign*}
+	&\bar{n}_{Ra(9\mu Ci)} = \bar{n} - \bar{n}_{p} \pm \Delta \bar{n}_{Ra(9\mu Ci)} = \frac{\bar{N}_{ Ra(9\mu Ci)} - \bar{N}_{p}}{t} \pm \Delta \bar{n}_{ Ra(9\mu Ci)} \\
+	\\
+	&\rightarrow \bar{n}_{Ra(9\mu Ci)} = \frac{76714.60 - 36.60}{60} \pm  9.98 = 1277.97 \pm 9.98 \text{ (counts/s)}
+\end{flalign*}
+
+Tốc độ đếm thật của nguồn Ra-226 $(5\mu Ci)$
+\begin{flalign*}
+	&\bar{n}_{Ra(5\mu Ci)} = \bar{n} - \bar{n}_{p} \pm \Delta \bar{n}_{Ra(5\mu Ci)} = \frac{\bar{N}_{Ra(5\mu Ci)} - \bar{N}_{p}}{t} \pm \Delta \bar{n}_{Ra(5\mu Ci)} \\
+	\\
+	&\rightarrow \bar{n}_{Ra(5\mu Ci)} = \frac{12492.10 - 36.60}{60} \pm  0.44 = 207.59 \pm 0.44 \text{ (counts/s)}
+\end{flalign*}
+
+\newpage
+\null
+\thispagestyle{empty}%
+\newpage
+
+\end{document}
